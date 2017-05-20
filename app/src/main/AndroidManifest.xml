@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".CompaniesActivity" />
-        <activity android:name=".EventsActivity"></activity>
+        <activity android:name=".EventsActivity" />
+        <activity android:name=".CoworkingActivity" />
+        <activity android:name=".AcademiesActivity"></activity>
     </application>
 
 </manifest>
