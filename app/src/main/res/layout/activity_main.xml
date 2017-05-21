@@ -1,63 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/colorAccent"
-    android:orientation="vertical"
     tools:context="com.wili.android.gdanskit.MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <RelativeLayout
-        android:id="@+id/academies"
-        style="@style/menuLayout">
+        <RelativeLayout
+            android:id="@+id/academies"
+            style="@style/menuLayout">
 
-        <TextView
-            android:id="@+id/firs_letter"
-            style="@style/menuFirstLetter"
-            android:text="@string/academies_first" />
+            <TextView
+                android:id="@+id/firs_letter"
+                style="@style/menuFirstLetter"
+                android:text="@string/academies_first" />
 
-        <TextView
-            style="@style/menuName"
-            android:text="@string/academies" />
-    </RelativeLayout>
+            <TextView
+                style="@style/menuName"
+                android:text="@string/academies" />
+        </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/companies"
-        style="@style/menuLayout">
+        <LinearLayout style="@style/separator" />
 
-        <TextView
-            style="@style/menuFirstLetter"
-            android:text="@string/companies_first" />
+        <RelativeLayout
+            android:id="@+id/companies"
+            style="@style/menuLayout">
 
-        <TextView
-            style="@style/menuName"
-            android:text="@string/companies" />
-    </RelativeLayout>
+            <TextView
+                style="@style/menuFirstLetter"
+                android:text="@string/companies_first" />
 
-    <RelativeLayout
-        android:id="@+id/coworking"
-        style="@style/menuLayout">
+            <TextView
+                style="@style/menuName"
+                android:text="@string/companies" />
+        </RelativeLayout>
 
-        <TextView
-            style="@style/menuFirstLetter"
-            android:text="@string/coworking_first" />
+        <LinearLayout style="@style/separator" />
 
-        <TextView
-            style="@style/menuName"
-            android:text="@string/coworking" />
-    </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/coworking"
+            style="@style/menuLayout">
 
-    <RelativeLayout
-        android:id="@+id/events"
-        style="@style/menuLayout">
+            <TextView
+                style="@style/menuFirstLetter"
+                android:text="@string/coworking_first" />
 
-        <TextView
-            style="@style/menuFirstLetter"
-            android:text="@string/events_first" />
+            <TextView
+                style="@style/menuName"
+                android:text="@string/coworking" />
+        </RelativeLayout>
 
-        <TextView
-            style="@style/menuName"
-            android:text="@string/events" />
-    </RelativeLayout>
-</LinearLayout>
+        <LinearLayout style="@style/separator" />
+
+        <RelativeLayout
+            android:id="@+id/events"
+            style="@style/menuLayout">
+
+            <TextView
+                style="@style/menuFirstLetter"
+                android:text="@string/events_first" />
+
+            <TextView
+                style="@style/menuName"
+                android:text="@string/events" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

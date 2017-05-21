@@ -34,4 +34,10 @@
         <item name="android:textSize">@dimen/menu_name_size</item>
     </style>
 
+    <style name="separator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/separator_height</item>
+        <item name="android:background">@color/colorAccent</item>
+    </style>
+
 </resources>

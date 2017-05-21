@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //Find the View that shows Events category
-        ImageView events = (ImageView) findViewById(R.id.events);
+        RelativeLayout events = (RelativeLayout) findViewById(R.id.events);
         //Set OnClickListener on that view
         events.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //Find the View that shows coworking category
-        ImageView coworking = (ImageView) findViewById(R.id.coworking);
+        RelativeLayout coworking = (RelativeLayout) findViewById(R.id.coworking);
         //Set OnClickListener on that view
         coworking.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //Find the View that shows freetime
-        ImageView academies = (ImageView) findViewById(R.id.academies);
+        RelativeLayout academies = (RelativeLayout) findViewById(R.id.academies);
         //Set OnClickListener on that view
         academies.setOnClickListener(new View.OnClickListener() {
             @Override
