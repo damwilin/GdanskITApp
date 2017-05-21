@@ -9,7 +9,7 @@ public class CompaniesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_companies);
+        setContentView(R.layout.items_list);
         //Add adapter
         ItemAdapter adapter = new ItemAdapter(this, ItemsDatabase.getCompanies());
         //Find the View that shows ListView

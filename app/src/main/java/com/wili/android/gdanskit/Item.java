@@ -1,10 +1,12 @@
 package com.wili.android.gdanskit;
 
+import android.support.annotation.NonNull;
+
 /**
  * Created by Damian on 5/20/2017.
  */
 
-public class Item {
+public class Item implements Comparable<Item> {
     private String name;
     private String localization;
     private String geoCoords;
@@ -39,4 +41,9 @@ public class Item {
         return "geo:0,0?q=" + geoCoords + "(" + name + ")";
     }
 
+    //Compare by item name
+    @Override
+    public int compareTo(@NonNull Item o) {
+        return this.getName().toLowerCase().compareTo(o.getName().toLowerCase());
+    }
 }

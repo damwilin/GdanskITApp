@@ -32,7 +32,7 @@ public class ItemAdapter extends ArrayAdapter<Item> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         listItemView = convertView;
         if (listItemView == null)
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.item, parent, false);
         final Item currentItem = getItem(position);
 
         //Find the View that shows logo

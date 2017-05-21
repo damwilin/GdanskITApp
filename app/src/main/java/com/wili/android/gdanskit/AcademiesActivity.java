@@ -2,12 +2,19 @@ package com.wili.android.gdanskit;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
 
 public class AcademiesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_academies);
+        setContentView(R.layout.items_list);
+        //Add adapter
+        ItemAdapter adapter = new ItemAdapter(this, ItemsDatabase.getAcademies());
+        //Find the View that shows ListView
+        ListView listView = (ListView) findViewById(R.id.list_view);
+        //Set adapter on that View
+        listView.setAdapter(adapter);
     }
 }
