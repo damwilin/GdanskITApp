@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GdanskIT</string>
+    <string name="app_name">Gdańsk IT</string>
     <string name="companies">companies</string>
     <string name="companies_first">C</string>
     <string name="events">events</string>
@@ -8,5 +8,6 @@
     <string name="coworking_first">C</string>
     <string name="academies">academies</string>
     <string name="academies_first">A</string>
-
+    <string name="app_name_gdansk">Gdańsk</string>
+    <string name="app_name_it">IT</string>
 </resources>

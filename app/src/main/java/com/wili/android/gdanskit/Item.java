@@ -7,12 +7,14 @@ import android.support.annotation.NonNull;
  */
 
 public class Item implements Comparable<Item> {
+    //Add member variables
     private String name;
     private String localization;
     private String geoCoords;
     private int logoResource;
     private String website;
 
+    //Constructor
     public Item(String name, String localization, int logoResource, String website, String geoCoords) {
         this.name = name;
         this.localization = localization;
