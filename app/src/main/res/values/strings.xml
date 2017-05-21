@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">GdanskIT</string>
-    <string name="companies">Companies in Gdansk</string>
-    <string name="events">Events in Gdansk</string>
-    <string name="coworking">Coworking in Gdansk</string>
-    <string name="academies">Academies in Gdansk</string>
+    <string name="companies">companies</string>
+    <string name="companies_first">C</string>
+    <string name="events">events</string>
+    <string name="events_first">E</string>
+    <string name="coworking">coworking</string>
+    <string name="coworking_first">C</string>
+    <string name="academies">academies</string>
+    <string name="academies_first">A</string>
 
 </resources>

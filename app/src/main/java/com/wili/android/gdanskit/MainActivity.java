@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -13,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
         //Find the View that shows Companies category
-        ImageView companies = (ImageView) findViewById(R.id.companies);
+        RelativeLayout companies = (RelativeLayout) findViewById(R.id.companies);
         //Set OnClickListener on that view
         companies.setOnClickListener(new View.OnClickListener() {
             @Override
