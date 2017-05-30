@@ -12,73 +12,74 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import java.util.ArrayList;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+import static com.wili.android.gdanskit.R.id.localization;
 
 /**
  * Created by Damian on 5/20/2017.
  */
 
 public class ItemAdapter extends ArrayAdapter<Item> {
-
     private View listItemView;
 
     public ItemAdapter(Activity context, ArrayList<Item> itemsList) {
         super(context, 0, itemsList);
+
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         listItemView = convertView;
+        ViewHolder holder;
         if (listItemView == null)
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.item, parent, false);
         final Item currentItem = getItem(position);
-
-        //Find the View that shows logo
-        ImageView logo = (ImageView) listItemView.findViewById(R.id.logo);
+        final Context context = getContext();
+        holder = new ViewHolder(listItemView);
         //Set image resource from current item
-        logo.setImageResource(currentItem.getLogoResource());
-        //Find the View that shows name
-        TextView name = (TextView) listItemView.findViewById(R.id.name);
+        holder.logo.setImageResource(currentItem.getLogoResource());
         //Set name from current item to that view
-        name.setText(currentItem.getName());
-        //Find the View that shows localization
-        TextView localization = (TextView) listItemView.findViewById(R.id.localization);
+        holder.name.setText(context.getString(currentItem.getName()));
         //Set localization from current item to that view
-        localization.setText(currentItem.getLocalizationRes());
-        //Find the View that shows localization icon
-        ImageView localizationIcon = (ImageView) listItemView.findViewById(R.id.localization_icon);
+        holder.localization.setText(context.getString(currentItem.getLocalization()));
         //Set OnClickListener on that View
-        localizationIcon.setOnClickListener(new View.OnClickListener() {
+        holder.localizationIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showMap(currentItem.getGeo());
+                showMap(currentItem);
             }
         });
-        //Find the View that shows website icon
-        ImageView websiteIcon = (ImageView) listItemView.findViewById(R.id.website_icon);
         //Set OnClickListener on that View
-        websiteIcon.setOnClickListener(new View.OnClickListener() {
+        holder.websiteIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showWebsite(currentItem.getWebsiteRes());
+                showWebsite(context.getString(currentItem.getWebsite()));
             }
         });
         return listItemView;
     }
 
     //Open map intent for current item location
-    private void showMap(String coord) {
+    private void showMap(Item item) {
         //Get current context
-        Context context = listItemView.getContext();
         //Get Uri from current coord
-        Uri gmmIntentUri = Uri.parse(coord);
+        Context context = listItemView.getContext();
+        String coords = readGeo(item, context);
+        Uri gmmIntentUri = Uri.parse(coords);
         //Create intent
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
         mapIntent.setPackage("com.google.android.apps.maps");
         if (mapIntent.resolveActivity(context.getPackageManager()) != null)
             context.startActivity(mapIntent);
+    }
+
+    private String readGeo(Item item, Context context) {
+        return "geo:0,0?q=" + context.getString(item.getGeo()) + "(" + context.getString(item.getName()) + ")";
     }
 
     private void showWebsite(String url) {
@@ -87,6 +88,24 @@ public class ItemAdapter extends ArrayAdapter<Item> {
         Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
         if (intent.resolveActivity(context.getPackageManager()) != null)
             context.startActivity(intent);
+    }
+
+    static class ViewHolder {
+        @BindView(R.id.logo)
+        ImageView logo;
+        @BindView(R.id.name)
+        TextView name;
+        @BindView(R.id.localization)
+        TextView localization;
+        @BindView(R.id.localization_icon)
+        ImageView localizationIcon;
+        @BindView(R.id.website_icon)
+        ImageView websiteIcon;
+
+        public ViewHolder(View view) {
+            ButterKnife.bind(this, view);
+        }
+
     }
 
 }

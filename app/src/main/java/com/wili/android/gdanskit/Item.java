@@ -1,17 +1,19 @@
 package com.wili.android.gdanskit;
 
+import android.content.Context;
 import android.content.res.Resources;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 
 /**
  * Created by Damian on 5/20/2017.
  */
 
-public class Item implements Comparable<Item> {
+public class Item {
     //Add member variables
     private int nameRes;
     private int localizationRes;
-    private int geoCoordsRes;
+    private int geoCoords;
     private int logoResource;
     private int websiteRes;
 
@@ -21,36 +23,26 @@ public class Item implements Comparable<Item> {
         this.localizationRes = localization;
         this.logoResource = logoResource;
         this.websiteRes = website;
-        this.geoCoordsRes = geoCoords;
+        this.geoCoords = geoCoords;
     }
 
-    public String getName() {
-        return getString(nameRes);
+    public int getName() {
+        return nameRes;
     }
 
-    public String getLocalizationRes() {
-        return getString(localizationRes);
+    public int getLocalization() {
+        return localizationRes;
     }
 
     public int getLogoResource() {
         return logoResource;
     }
 
-    public String getWebsiteRes() {
-        return getString(websiteRes);
+    public int getWebsite() {
+        return websiteRes;
     }
 
-    public String getGeo() {
-        return "geo:0,0?q=" + getString(geoCoordsRes) + "(" + getName() + ")";
-    }
-
-    //Compare by item nameRes
-    @Override
-    public int compareTo(@NonNull Item o) {
-        return this.getName().toLowerCase().compareTo(o.getName().toLowerCase());
-    }
-
-    private String getString(int resourceID) {
-        return Resources.getSystem().getString(resourceID);
+    public int getGeo() {
+        return geoCoords;
     }
 }

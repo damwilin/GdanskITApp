@@ -35,8 +35,6 @@ public class ItemsDatabase {
     public static ArrayList<Item> getCompanies() {
         if (companies == null) {
             initializeCompanies();
-            //Sort all companies
-            Collections.sort(companies);
         }
         return companies;
     }
@@ -55,8 +53,6 @@ public class ItemsDatabase {
     public static ArrayList<Item> getAcademies() {
         if (academies == null) {
             initializeAcademies();
-            //Sort academies by name
-            Collections.sort(academies);
         }
         return academies;
     }
@@ -76,8 +72,6 @@ public class ItemsDatabase {
     public static ArrayList<Item> getCoworking() {
         if (coworking == null) {
             initializeCoworking();
-            //Sort coworking by name
-            Collections.sort(coworking);
         }
         return coworking;
     }
@@ -95,8 +89,6 @@ public class ItemsDatabase {
     public static ArrayList<Item> getEvents() {
         if (events == null) {
             initializeEvents();
-            //Sort events by name
-            Collections.sort(events);
         }
         return events;
     }
