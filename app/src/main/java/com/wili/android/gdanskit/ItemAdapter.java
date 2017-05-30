@@ -46,7 +46,7 @@ public class ItemAdapter extends ArrayAdapter<Item> {
         //Find the View that shows localization
         TextView localization = (TextView) listItemView.findViewById(R.id.localization);
         //Set localization from current item to that view
-        localization.setText(currentItem.getLocalization());
+        localization.setText(currentItem.getLocalizationRes());
         //Find the View that shows localization icon
         ImageView localizationIcon = (ImageView) listItemView.findViewById(R.id.localization_icon);
         //Set OnClickListener on that View
@@ -62,7 +62,7 @@ public class ItemAdapter extends ArrayAdapter<Item> {
         websiteIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showWebsite(currentItem.getWebsite());
+                showWebsite(currentItem.getWebsiteRes());
             }
         });
         return listItemView;

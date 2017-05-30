@@ -1,5 +1,7 @@
 package com.wili.android.gdanskit;
 
+import android.content.res.Resources;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -18,16 +20,16 @@ public class ItemsDatabase {
         //initialize companies
         companies = new ArrayList<Item>();
         //Add all items to companies
-        companies.add(new Item("Intel", "Juliusza Słowackiego 173", R.drawable.logo_intel, "http://www.intel.com/content/www/us/en/jobs/locations/poland.html", "54.380635, 18.484273"));
-        companies.add(new Item("Amazon", "Aleja Grunwaldzka 472", R.drawable.logo_amazon, "http://gdansk-amazon.com/", "54.402884, 18.571840"));
-        companies.add(new Item("Comarch S.A.", "Aleja Grunwaldzka 103a", R.drawable.logo_comarch, "http://comarch.pl", "54.377891, 18.608608"));
-        companies.add(new Item("Spartez", "Norwida 2", R.drawable.logo_spartez, "http://spartez.com", "54.383966, 18.592229"));
-        companies.add(new Item("Lufthansa", "Norwida 2", R.drawable.logo_lufthansa, "http://lhsystems.pl", "54.371281, 18.628679"));
-        companies.add(new Item("Wirtualna Polska", "Traugutta 115c", R.drawable.logo_wp, "http://wp.pl", "54.369584, 18.608203"));
-        companies.add(new Item("Sygnity", "Norwida 4", R.drawable.logo_sygnity, "http://sygnity.pl", "54.383644, 18.591645"));
-        companies.add(new Item("IHS Markit", "Jaśkowa Dolina 15", R.drawable.logo_ihs, "http://ihsgdansk.com", "54.374789, 18.604347"));
-        companies.add(new Item("Kainos", "Jana z Kolna 11", R.drawable.logo_kainos, "http://kainos.pl", "54.359918, 18.646896"));
-        companies.add(new Item("Dynatrace", "Aleja Grunwaldzka 411", R.drawable.logo_dynatrace, "http://gdansk.dynatrace.pl", "54.399043, 18.576568"));
+        companies.add(new Item(R.string.intel, R.string.intel_location, R.drawable.logo_intel, R.string.intel_web, R.string.intel_geo));
+        companies.add(new Item(R.string.amazon, R.string.amazon_location, R.drawable.logo_amazon, R.string.amazon_web, R.string.amazon_geo));
+        companies.add(new Item(R.string.comarch, R.string.comarch_location, R.drawable.logo_comarch, R.string.comarch_web, R.string.comarch_geo));
+        companies.add(new Item(R.string.spartez, R.string.spartez_location, R.drawable.logo_spartez, R.string.spartez_web, R.string.spartez_geo));
+        companies.add(new Item(R.string.lufthansa, R.string.lufthansa_location, R.drawable.logo_lufthansa, R.string.lufthansa_web, R.string.lufthansa_geo));
+        companies.add(new Item(R.string.wp, R.string.wp_location, R.drawable.logo_wp, R.string.wp_web, R.string.wp_geo));
+        companies.add(new Item(R.string.sygnity, R.string.sygnity_location, R.drawable.logo_sygnity, R.string.sygnity_web, R.string.sygnity_geo));
+        companies.add(new Item(R.string.ihs, R.string.ihs_location, R.drawable.logo_ihs, R.string.ihs_web, R.string.ihs_geo));
+        companies.add(new Item(R.string.kainos, R.string.kainos_location, R.drawable.logo_kainos, R.string.kainos_web, R.string.kainos_geo));
+        companies.add(new Item(R.string.dynatrace, R.string.dynatrace_location, R.drawable.logo_dynatrace, R.string.dynatrace_web, R.string.dynatrace_geo));
     }
 
     public static ArrayList<Item> getCompanies() {
@@ -43,11 +45,11 @@ public class ItemsDatabase {
         //initialize all academies
         academies = new ArrayList<Item>();
         //add all items to acedemies
-        academies.add(new Item("Infoshare Academy", "Aleja Grunwaldzka 472B", R.drawable.logo_infoshare, "http://infoshareacademy.com", "54.403219, 18.569890"));
-        academies.add(new Item("Software Development Academy", "Aleja Zwycięstwa 96/98", R.drawable.logo_sda, "http://sdacademy.pl/kursy-trojmiasto/", "54.496816, 18.537886"));
-        academies.add(new Item("ALX", "Wały Piastowskie 1", R.drawable.logo_alx, "https://www.alx.pl/", "54.358871, 18.646458"));
-        academies.add(new Item("Code Skills", "Wały Piastowskie 1", R.drawable.logo_codeskills, "http://codeskills.pl/", "54.358871, 18.646458"));
-        academies.add(new Item("Code:me", "Lęborska 3b", R.drawable.logo_codeme, "http://codeme.pl/", "54.404697, 18.576197"));
+        academies.add(new Item(R.string.infoshare, R.string.infoshare_location, R.drawable.logo_infoshare, R.string.infoshare_web, R.string.infoshare_geo));
+        academies.add(new Item(R.string.sda, R.string.sda_location, R.drawable.logo_sda, R.string.sda_web, R.string.sda_geo));
+        academies.add(new Item(R.string.alx, R.string.alx_location, R.drawable.logo_alx, R.string.alx_web, R.string.alx_geo));
+        academies.add(new Item(R.string.codes, R.string.codes_location, R.drawable.logo_codeskills, R.string.codes_web, R.string.codes_geo));
+        academies.add(new Item(R.string.cm, R.string.cm_location, R.drawable.logo_codeme, R.string.cm_web, R.string.cm_geo));
     }
 
     public static ArrayList<Item> getAcademies() {
@@ -63,13 +65,12 @@ public class ItemsDatabase {
         //Initialize coworking
         coworking = new ArrayList<Item>();
         //Add all items to coworking
-        coworking.add(new Item("Współpracownia", "Jaśkowa Dolina 60", R.drawable.logo_wspolpracownia, "http://wspolpracownia.pl/", "54.373165, 18.602939"));
-        coworking.add(new Item("IKIMASA", "Aleja Grunwaldzka 138", R.drawable.logo_ikimasa, "http://ikimasa.pl", "54.373165, 18.602939"));
-        coworking.add(new Item("Business Link", "Aleja Grunwaldzka 472", R.drawable.logo_bs, "http://blpoland.com/trojmiasto/", "54.402876, 18.571894"));
-        coworking.add(new Item("O4 Coworking", "Aleja Grunwaldzka 472", R.drawable.logo_o4, "http://o4.network/pl/", "54.402876, 18.571894"));
-        coworking.add(new Item("Regus", "Aleja Grunwaldzka 411", R.drawable.logo_regus, "http://www.regus.pl/coworking-space/gdansk", "54.399292, 18.576187"));
-        coworking.add(new Item("Concept Space", "plac Górnośląski 21", R.drawable.logo_conceptspace, "http://www.conceptspace.pl/", "54.484304, 18.537087"));
-        coworking.add(new Item("Inkubator Starter", "Lęborska 3B", R.drawable.logo_starter, "http://www.inkubatorstarter.pl/", "54.404700, 18.576024"));
+        coworking.add(new Item(R.string.wspol, R.string.wspol_location, R.drawable.logo_wspolpracownia, R.string.wspol_web, R.string.wspol_geo));
+        coworking.add(new Item(R.string.ikimasa, R.string.ikimasa_location, R.drawable.logo_ikimasa, R.string.ikimasa_web, R.string.ikimasa_geo));
+        coworking.add(new Item(R.string.bl, R.string.bl_location, R.drawable.logo_bs, R.string.bl_web, R.string.bl_geo));
+        coworking.add(new Item(R.string.o4, R.string.o4_location, R.drawable.logo_o4, R.string.o4_web, R.string.o4_geo));
+        coworking.add(new Item(R.string.regus, R.string.regus_location, R.drawable.logo_regus, R.string.regus_web, R.string.regus_geo));
+        coworking.add(new Item(R.string.starter, R.string.starter_location, R.drawable.logo_starter, R.string.starter_web, R.string.starter_geo));
     }
 
     public static ArrayList<Item> getCoworking() {
@@ -85,10 +86,10 @@ public class ItemsDatabase {
         //Initialize events
         events = new ArrayList<Item>();
         //Add all items to events
-        events.add(new Item("Tech Talk", "Aleja Grunwaldzka 472B", R.drawable.logo_techtalk, "https://web.facebook.com/pg/codilime/events/?ref=page_internal", "54.403178, 18.569837"));
-        events.add(new Item("Fuck Up Nights", "Aleja Grunwaldzka 472B", R.drawable.logo_fuckup, "http://trojmiasto.fuckupnights.pl/", "54.404728, 18.576016"));
-        events.add(new Item("Infoshare", "Żaglowa 11", R.drawable.logo_infoshare, "http://infoshare.pl/", "54.386483, 18.634967"));
-        events.add(new Item("Hacker:space", "Aleja Grunwaldzka 4/3, 103", R.drawable.logo_hackerspace, "http://hs3.pl/calendar/", "54.374401, 18.619419"));
+        events.add(new Item(R.string.tt, R.string.tt_location, R.drawable.logo_techtalk, R.string.tt_web, R.string.tt_geo));
+        events.add(new Item(R.string.fun, R.string.fun_location, R.drawable.logo_fuckup, R.string.fun_web, R.string.fun_geo));
+        events.add(new Item(R.string.info, R.string.info_location, R.drawable.logo_infoshare, R.string.info_web, R.string.info_geo));
+        events.add(new Item(R.string.hs, R.string.hs_location, R.drawable.logo_hackerspace, R.string.hs_web, R.string.hs_geo));
     }
 
     public static ArrayList<Item> getEvents() {
@@ -99,4 +100,6 @@ public class ItemsDatabase {
         }
         return events;
     }
+
+
 }

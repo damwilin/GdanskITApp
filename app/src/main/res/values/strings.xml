@@ -10,4 +10,130 @@
     <string name="academies_first">A</string>
     <string name="app_name_gdansk">Gdańsk</string>
     <string name="app_name_it">IT</string>
+
+    <string name="intel">Intel</string>
+    <string name="intel_location">Juliusza Słowackiego 173</string>
+    <string name="intel_web">http://www.intel.com/content/www/us/en/jobs/locations/poland.html</string>
+    <string name="intel_geo">54.380635, 18.484273</string>
+
+    <string name="amazon">Amazon</string>
+    <string name="amazon_location">Aleja Grunwaldzka 472</string>
+    <string name="amazon_web">http://gdansk-amazon.com/</string>
+    <string name="amazon_geo">54.402884, 18.571840</string>
+
+    <string name="comarch">Comarch S.A.</string>
+    <string name="comarch_location">Aleja Grunwaldzka 103a</string>
+    <string name="comarch_web">http://comarch.pl</string>
+    <string name="comarch_geo">54.377891, 18.608608</string>
+
+    <string name="spartez">Spartez</string>
+    <string name="spartez_location">Norwida 2</string>
+    <string name="spartez_web">http://spartez.com</string>
+    <string name="spartez_geo">54.383966, 18.592229</string>
+
+    <string name="lufthansa">Lufthansa</string>
+    <string name="lufthansa_location">Aleja Zwycięstwa 13a</string>
+    <string name="lufthansa_web">http://lhsystems.pl</string>
+    <string name="lufthansa_geo">54.371281, 18.628679</string>
+
+    <string name="wp">Wirtualna Polska</string>
+    <string name="wp_location">Traugutta 115c</string>
+    <string name="wp_web">http://wp.pl</string>
+    <string name="wp_geo">54.369584, 18.608203</string>
+
+    <string name="sygnity">Sygnity</string>
+    <string name="sygnity_location">Norwida 4</string>
+    <string name="sygnity_web">http://sygnity.pl</string>
+    <string name="sygnity_geo">54.383644, 18.591645</string>
+
+    <string name="ihs">IHS Markit</string>
+    <string name="ihs_location">Jaśkowa Dolina 15</string>
+    <string name="ihs_web">http://ihsgdansk.pl</string>
+    <string name="ihs_geo">54.374789, 18.604347</string>
+
+    <string name="kainos">Kainos</string>
+    <string name="kainos_location">Jana z Kolna 11</string>
+    <string name="kainos_web">http://kainos.pl</string>
+    <string name="kainos_geo">54.359918, 18.646896</string>
+
+    <string name="dynatrace">Dynatrace</string>
+    <string name="dynatrace_location">Aleja Grunwaldzka 411</string>
+    <string name="dynatrace_web">http://gdansk.dynatrace.pl</string>
+    <string name="dynatrace_geo">54.399043, 18.576568</string>
+
+    <string name="infoshare">Infoshare Academy</string>
+    <string name="infoshare_location">Aleja Grunwaldzka 472B</string>
+    <string name="infoshare_web">http://infoshareacademy.com</string>
+    <string name="infoshare_geo">54.403219, 18.569890</string>
+
+    <string name="sda">Software Development Academy</string>
+    <string name="sda_location">Aleja Zwycięstwa 96/98</string>
+    <string name="sda_web">http://sdacademy.pl/kursy-trojmiasto/</string>
+    <string name="sda_geo">54.496816, 18.537886</string>
+
+    <string name="alx">ALX</string>
+    <string name="alx_location">Wały Piastowskie 1</string>
+    <string name="alx_web">https://www.alx.pl/</string>
+    <string name="alx_geo">54.358871, 18.646458</string>
+
+    <string name="codes">Code Skills</string>
+    <string name="codes_location">Wały Piastowskie 1</string>
+    <string name="codes_web">http://codeskills.pl/</string>
+    <string name="codes_geo">54.358871, 18.646458</string>
+
+    <string name="cm">Code:me</string>
+    <string name="cm_location">Lęborska 3b</string>
+    <string name="cm_web">http://codeme.pl/</string>
+    <string name="cm_geo">54.404697, 18.576197</string>
+
+    <string name="wspol">Współpracownia</string>
+    <string name="wspol_location">Jaśkowa Dolina 60</string>
+    <string name="wspol_web">http://wspolpracownia.pl/</string>
+    <string name="wspol_geo">54.373165, 18.602939</string>
+
+    <string name="ikimasa">IKIMASA</string>
+    <string name="ikimasa_location">Aleja Grunwaldzka 138</string>
+    <string name="ikimasa_web">http://ikimasa.pl</string>
+    <string name="ikimasa_geo">54.373165, 18.602939</string>
+
+
+    <string name="bl">Business Link</string>
+    <string name="bl_location">Aleja Grunwaldzka 472</string>
+    <string name="bl_web">http://blpoland.com/trojmiasto/</string>
+    <string name="bl_geo">54.402876, 18.571894</string>
+
+    <string name="o4">O4 Coworking</string>
+    <string name="o4_location">Aleja Grunwaldzka 472</string>
+    <string name="o4_web">http://o4.network/pl/</string>
+    <string name="o4_geo">54.402876, 18.571894</string>
+
+    <string name="regus">Regus</string>
+    <string name="regus_location">Aleja Grunwaldzka 411</string>
+    <string name="regus_web">http://www.regus.pl/coworking-space/gdansk</string>
+    <string name="regus_geo">54.399292, 18.576187</string>
+
+    <string name="starter">Inkubator Starter</string>
+    <string name="starter_location">Lęborska 3B</string>
+    <string name="starter_web">http://www.inkubatorstarter.pl/</string>
+    <string name="starter_geo">54.404700, 18.576024</string>1
+
+    <string name="tt">Tech Talk</string>
+    <string name="tt_location">Aleja Grunwaldzka 472B</string>
+    <string name="tt_web">https://web.facebook.com/pg/codilime/events/?ref=page_internal</string>
+    <string name="tt_geo">54.403178, 18.569837</string>
+
+    <string name="fun">Fuck Up Nights</string>
+    <string name="fun_location">Aleja Grunwaldzka 472B</string>
+    <string name="fun_web">http://trojmiasto.fuckupnights.pl/</string>
+    <string name="fun_geo">54.404728, 18.576016</string>
+
+    <string name="info">Infoshare</string>
+    <string name="info_location">Żaglowa 11</string>
+    <string name="info_web">http://infoshare.pl/</string>
+    <string name="info_geo">54.386483, 18.634967</string>
+
+    <string name="hs">Hacker:space</string>
+    <string name="hs_location">Aleja Grunwaldzka 4/3 m103</string>
+    <string name="hs_web">http://hs3.pl/calendar/</string>
+    <string name="hs_geo">54.374401, 18.619419</string>
 </resources>
