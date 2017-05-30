@@ -17,8 +17,6 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import static com.wili.android.gdanskit.R.id.localization;
-
 /**
  * Created by Damian on 5/20/2017.
  */
